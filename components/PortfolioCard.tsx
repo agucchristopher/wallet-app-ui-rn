@@ -42,13 +42,13 @@ const PortfolioCard = () => {
             />
           </TouchableOpacity>
           <View style={{ columnGap: 0 }}>
-            <Text style={{ color: "white", fontSize: 18, fontFamily: "Garet" }}>
+            <Text style={{ color: "white", fontSize: 16, fontFamily: "Garet" }}>
               Hello,
             </Text>
             <Text
               style={{
                 color: "white",
-                fontSize: 17,
+                fontSize: 14,
                 fontFamily: "Garet",
                 marginTop: -8,
               }}
@@ -94,6 +94,190 @@ const PortfolioCard = () => {
         <Text style={{ color: "#fff", fontSize: 30, fontFamily: "Rubik" }}>
           $25,000
         </Text>
+        <View style={{ flexDirection: "row", gap: 15 }}>
+          <View
+            style={{
+              flexDirection: "column",
+              alignContent: "center",
+              // backgroundColor: "green",
+              // padding: 15,
+              justifyContent: "center",
+              width: 75,
+              gap: 10,
+            }}
+          >
+            <TouchableOpacity style={{ alignSelf: "center" }}>
+              <Svg
+                width={28}
+                height={28}
+                viewBox="0 0 24 24"
+                fill="none"
+                // xmlns="http://www.w3.org/2000/svg"
+              >
+                <Path
+                  opacity="0.5"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M3 14.25C3.41421 14.25 3.75 14.5858 3.75 15C3.75 16.4354 3.75159 17.4365 3.85315 18.1919C3.9518 18.9257 4.13225 19.3142 4.40901 19.591C4.68577 19.8678 5.07435 20.0482 5.80812 20.1469C6.56347 20.2484 7.56459 20.25 9 20.25H15C16.4354 20.25 17.4365 20.2484 18.1919 20.1469C18.9257 20.0482 19.3142 19.8678 19.591 19.591C19.8678 19.3142 20.0482 18.9257 20.1469 18.1919C20.2484 17.4365 20.25 16.4354 20.25 15C20.25 14.5858 20.5858 14.25 21 14.25C21.4142 14.25 21.75 14.5858 21.75 15V15.0549C21.75 16.4225 21.75 17.5248 21.6335 18.3918C21.5125 19.2919 21.2536 20.0497 20.6517 20.6516C20.0497 21.2536 19.2919 21.5125 18.3918 21.6335C17.5248 21.75 16.4225 21.75 15.0549 21.75H8.94513C7.57754 21.75 6.47522 21.75 5.60825 21.6335C4.70814 21.5125 3.95027 21.2536 3.34835 20.6517C2.74643 20.0497 2.48754 19.2919 2.36652 18.3918C2.24996 17.5248 2.24998 16.4225 2.25 15.0549C2.25 15.0366 2.25 15.0183 2.25 15C2.25 14.5858 2.58579 14.25 3 14.25Z"
+                  fill="#fff"
+                />
+                <Path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 2.25C12.2106 2.25 12.4114 2.33852 12.5535 2.49392L16.5535 6.86892C16.833 7.17462 16.8118 7.64902 16.5061 7.92852C16.2004 8.20802 15.726 8.18678 15.4465 7.88108L12.75 4.9318V16C12.75 16.4142 12.4142 16.75 12 16.75C11.5858 16.75 11.25 16.4142 11.25 16V4.9318L8.55353 7.88108C8.27403 8.18678 7.79963 8.20802 7.49393 7.92852C7.18823 7.64902 7.16698 7.17462 7.44648 6.86892L11.4465 2.49392C11.5886 2.33852 11.7894 2.25 12 2.25Z"
+                  fill="#fff"
+                />
+              </Svg>
+            </TouchableOpacity>
+            <Text
+              style={{
+                textAlign: "center",
+                alignSelf: "center",
+                color: "white",
+                fontFamily: "Garet",
+              }}
+            >
+              Top Up
+            </Text>
+          </View>
+          <View
+            style={{
+              flexDirection: "column",
+              alignContent: "center",
+              // backgroundColor: "green",
+              // padding: 15,
+              justifyContent: "center",
+              width: 75,
+              gap: 10,
+            }}
+          >
+            <TouchableOpacity style={{ alignSelf: "center" }}>
+              <Svg
+                width={28}
+                height={28}
+                viewBox="0 0 24 24"
+                fill="none"
+                // xmlns="http://www.w3.org/2000/svg"
+              >
+                <Path
+                  opacity="0.5"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M3 14.25C3.41421 14.25 3.75 14.5858 3.75 15C3.75 16.4354 3.75159 17.4365 3.85315 18.1919C3.9518 18.9257 4.13225 19.3142 4.40901 19.591C4.68577 19.8678 5.07435 20.0482 5.80812 20.1469C6.56347 20.2484 7.56459 20.25 9 20.25H15C16.4354 20.25 17.4365 20.2484 18.1919 20.1469C18.9257 20.0482 19.3142 19.8678 19.591 19.591C19.8678 19.3142 20.0482 18.9257 20.1469 18.1919C20.2484 17.4365 20.25 16.4354 20.25 15C20.25 14.5858 20.5858 14.25 21 14.25C21.4142 14.25 21.75 14.5858 21.75 15V15.0549C21.75 16.4225 21.75 17.5248 21.6335 18.3918C21.5125 19.2919 21.2536 20.0497 20.6517 20.6516C20.0497 21.2536 19.2919 21.5125 18.3918 21.6335C17.5248 21.75 16.4225 21.75 15.0549 21.75H8.94513C7.57754 21.75 6.47522 21.75 5.60825 21.6335C4.70814 21.5125 3.95027 21.2536 3.34835 20.6517C2.74643 20.0497 2.48754 19.2919 2.36652 18.3918C2.24996 17.5248 2.24998 16.4225 2.25 15.0549C2.25 15.0366 2.25 15.0183 2.25 15C2.25 14.5858 2.58579 14.25 3 14.25Z"
+                  fill="#fff"
+                />
+                <Path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 16.75C12.2106 16.75 12.4114 16.6615 12.5535 16.5061L16.5535 12.1311C16.833 11.8254 16.8118 11.351 16.5061 11.0715C16.2004 10.792 15.726 10.8132 15.4465 11.1189L12.75 14.0682V3C12.75 2.58579 12.4142 2.25 12 2.25C11.5858 2.25 11.25 2.58579 11.25 3V14.0682L8.55353 11.1189C8.27403 10.8132 7.79963 10.792 7.49393 11.0715C7.18823 11.351 7.16698 11.8254 7.44648 12.1311L11.4465 16.5061C11.5886 16.6615 11.7894 16.75 12 16.75Z"
+                  fill="#fff"
+                />
+              </Svg>
+            </TouchableOpacity>
+            <Text
+              style={{
+                textAlign: "center",
+                alignSelf: "center",
+                color: "white",
+                fontFamily: "Garet",
+                fontSize: 14,
+              }}
+            >
+              Withdraw
+            </Text>
+          </View>
+          <View
+            style={{
+              flexDirection: "column",
+              alignContent: "center",
+              // backgroundColor: "green",
+              // padding: 15,
+              justifyContent: "center",
+              width: 75,
+              gap: 10,
+            }}
+          >
+            <TouchableOpacity style={{ alignSelf: "center" }}>
+              <Svg
+                width={28}
+                height={28}
+                viewBox="0 0 24 24"
+                fill="none"
+                // xmlns="http://www.w3.org/2000/svg"
+              >
+                <Path
+                  opacity="0.4"
+                  d="M22 15C22 18.87 18.87 22 15 22L16.05 20.25"
+                  stroke="#fff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <Path
+                  opacity="0.4"
+                  d="M2 9C2 5.13 5.13 2 9 2L7.95 3.75"
+                  stroke="#fff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <Path
+                  d="M13.6992 4.4502L17.6792 6.75018L21.6192 4.46021"
+                  stroke="#fff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <Path
+                  d="M17.6797 10.8203V6.74023"
+                  stroke="#fff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <Path
+                  d="M16.7396 2.21L14.3396 3.53996C13.7996 3.83996 13.3496 4.59995 13.3496 5.21995V7.75999C13.3496 8.37999 13.7896 9.13998 14.3396 9.43998L16.7396 10.77C17.2496 11.06 18.0896 11.06 18.6096 10.77L21.0096 9.43998C21.5496 9.13998 21.9996 8.37999 21.9996 7.75999V5.21995C21.9996 4.59995 21.5596 3.83996 21.0096 3.53996L18.6096 2.21C18.0996 1.93 17.2596 1.93 16.7396 2.21Z"
+                  stroke="#fff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <Path
+                  d="M2.34961 15.4502L6.31961 17.7502L10.2696 15.4602"
+                  stroke="#fff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <Path
+                  d="M6.32031 21.8203V17.7402"
+                  stroke="#fff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <Path
+                  d="M5.39 13.21L2.99001 14.54C2.45001 14.84 2 15.5999 2 16.2199V18.76C2 19.38 2.44001 20.14 2.99001 20.44L5.39 21.77C5.9 22.06 6.73999 22.06 7.25999 21.77L9.66 20.44C10.2 20.14 10.65 19.38 10.65 18.76V16.2199C10.65 15.5999 10.21 14.84 9.66 14.54L7.25999 13.21C6.73999 12.93 5.9 12.93 5.39 13.21Z"
+                  stroke="#fff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </Svg>
+            </TouchableOpacity>
+            <Text
+              style={{
+                textAlign: "center",
+                alignSelf: "center",
+                color: "white",
+                fontFamily: "Garet",
+                fontSize: 14,
+              }}
+            >
+              Transfer
+            </Text>
+          </View>
+        </View>
       </BlurView>
     </View>
   );
