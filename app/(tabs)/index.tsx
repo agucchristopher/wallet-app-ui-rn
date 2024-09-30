@@ -4,6 +4,8 @@ import {
   Platform,
   ScrollView,
   StatusBar,
+  View,
+  Text,
 } from "react-native";
 
 import { ThemedText } from "@/components/ThemedText";
@@ -13,10 +15,15 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomeScreen() {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <ScrollView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>
+      <ScrollView style={{ flex: 1, backgroundColor: "white" }}>
         <StatusBar backgroundColor={"#270685"} barStyle={"light-content"} />
         <PortfolioCard />
+        <View style={{ padding: 5, marginLeft: 10, marginTop: 10 }}>
+          <Text style={{ fontFamily: "Rubik", fontSize: 16 }}>
+            Recent Transfers
+          </Text>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );

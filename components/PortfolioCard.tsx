@@ -1,5 +1,6 @@
 import {
   Image,
+  Platform,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -11,12 +12,16 @@ import { Circle, Path, Svg } from "react-native-svg";
 import { BlurView } from "expo-blur";
 import { LinearGradient } from "expo-linear-gradient";
 // import { BlurView } from "@react-native-community/blur";
-
+import * as Haptics from "expo-haptics";
 const PortfolioCard = () => {
   let { height, width } = useWindowDimensions();
   return (
     <View
-      style={{ height: height * 0.35, backgroundColor: "#270685", padding: 5 }}
+      style={{
+        height: Platform.OS == "android" ? height * 0.4 : height * 0.35,
+        backgroundColor: "#270685",
+        padding: 5,
+      }}
     >
       <View
         style={{
@@ -57,7 +62,9 @@ const PortfolioCard = () => {
             </Text>
           </View>
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)}
+        >
           <Svg width={25} height={25} viewBox="0 0 24 24" fill="none">
             <Circle cx="12" cy="12" r="3" stroke="#fff" stroke-width="1.5" />
             <Path
@@ -68,34 +75,45 @@ const PortfolioCard = () => {
           </Svg>
         </TouchableOpacity>
       </View>
-      <BlurView
-        intensity={30}
+      <View
+        // intensity={30}
         style={[
           {
-            height: 170,
-            width: "95%",
+            height: 180,
+            width: "92.5%",
             alignSelf: "center",
-            marginTop: 10,
+            marginTop: 25,
           },
           {
             borderRadius: 15,
-            backgroundColor: "rgba(255, 255, 255, 0.2)", // Translucent background
+            // backgroundColor: "rgba(255, 255, 255, 0.2)", // Translucent background
             borderWidth: 1,
             borderColor: "rgba(255, 255, 255, 0.3)",
             alignItems: "center",
             // justifyContent: "center",
-            padding: 20,
+            padding: 15,
+            backgroundColor: "#46279e",
           },
         ]}
       >
         <Text style={{ color: "#fff", fontSize: 13, fontFamily: "Garet" }}>
           Main Balance
         </Text>
-        <Text style={{ color: "#fff", fontSize: 30, fontFamily: "Rubik" }}>
-          $25,000
+        <Text
+          style={{
+            color: "#fff",
+            fontSize: 35,
+            fontFamily: "Rubik",
+            marginBottom: 5,
+          }}
+        >
+          $250,000
         </Text>
         <View style={{ flexDirection: "row", gap: 15 }}>
-          <View
+          <TouchableOpacity
+            onPress={() =>
+              Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)
+            }
             style={{
               flexDirection: "column",
               alignContent: "center",
@@ -106,7 +124,12 @@ const PortfolioCard = () => {
               gap: 10,
             }}
           >
-            <TouchableOpacity style={{ alignSelf: "center" }}>
+            <TouchableOpacity
+              onPress={() =>
+                Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)
+              }
+              style={{ alignSelf: "center" }}
+            >
               <Svg
                 width={28}
                 height={28}
@@ -139,8 +162,11 @@ const PortfolioCard = () => {
             >
               Top Up
             </Text>
-          </View>
-          <View
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() =>
+              Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)
+            }
             style={{
               flexDirection: "column",
               alignContent: "center",
@@ -151,7 +177,12 @@ const PortfolioCard = () => {
               gap: 10,
             }}
           >
-            <TouchableOpacity style={{ alignSelf: "center" }}>
+            <TouchableOpacity
+              onPress={() =>
+                Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)
+              }
+              style={{ alignSelf: "center" }}
+            >
               <Svg
                 width={28}
                 height={28}
@@ -185,8 +216,11 @@ const PortfolioCard = () => {
             >
               Withdraw
             </Text>
-          </View>
-          <View
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() =>
+              Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)
+            }
             style={{
               flexDirection: "column",
               alignContent: "center",
@@ -197,7 +231,12 @@ const PortfolioCard = () => {
               gap: 10,
             }}
           >
-            <TouchableOpacity style={{ alignSelf: "center" }}>
+            <TouchableOpacity
+              onPress={() =>
+                Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)
+              }
+              style={{ alignSelf: "center" }}
+            >
               <Svg
                 width={28}
                 height={28}
@@ -276,9 +315,9 @@ const PortfolioCard = () => {
             >
               Transfer
             </Text>
-          </View>
+          </TouchableOpacity>
         </View>
-      </BlurView>
+      </View>
     </View>
   );
 };
