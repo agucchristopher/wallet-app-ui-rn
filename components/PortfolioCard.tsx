@@ -16,12 +16,13 @@ import * as Haptics from "expo-haptics";
 const PortfolioCard = () => {
   let { height, width } = useWindowDimensions();
   return (
-    <View
+    <LinearGradient
       style={{
         height: Platform.OS == "android" ? height * 0.4 : height * 0.35,
-        backgroundColor: "#270685",
+        // backgroundColor: "#270685",
         padding: 5,
       }}
+      colors={["#270685", "#270685", "#46279e"]}
     >
       <View
         style={{
@@ -102,12 +103,13 @@ const PortfolioCard = () => {
         <Text
           style={{
             color: "#fff",
-            fontSize: 35,
+            fontSize: 25,
             fontFamily: "Rubik",
-            marginBottom: 5,
+            marginBottom: 15,
+            marginTop: 10,
           }}
         >
-          $250,000
+          $500
         </Text>
         <View style={{ flexDirection: "row", gap: 15 }}>
           <TouchableOpacity
@@ -318,7 +320,7 @@ const PortfolioCard = () => {
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </LinearGradient>
   );
 };
 
